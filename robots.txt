@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /translink_redesign/
+Disallow: /serious_soups/

@@ -1,0 +1,1 @@
+Having a love of both computers and art made learning about design an easy decision. Ever since being introduced to Photoshop in 2009, I've been exploring graphic design and am always looking for opportunities to put what I've learned to the test.

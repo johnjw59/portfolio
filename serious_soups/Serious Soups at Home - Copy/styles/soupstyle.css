@@ -1,0 +1,26 @@
+p {
+	margin-left: 75px;
+	margin-top: 40px;
+}
+img {
+	margin-right: 75px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+p {
+	min-height: 350px;
+}
+#back {
+	font-weight: bold;
+	font-size: 125%;
+	margin-left: 50px;
+}
+#back a:link {
+	text-decoration: none;
+}
+#back a:hover {
+	text-decoration: underline;
+}
+#back a:visited {
+	text-decoration: none;
+}

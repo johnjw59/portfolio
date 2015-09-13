@@ -1,0 +1,3 @@
+<a href="" data-largesrc="img/rysa_brochure.png" data-title="RYSA Programs Brochure" data-description="From June to September in 2013 I was employed as a &quotWeb and Marketing Assistant&quot at the <a href='http://www.rysa.bc.ca' target='_blank'>Richmond Youth Service Agency</a> as a summer job. One of things I did while there was updating the design of all of their marketing materials, the first of which was this brochure for all the programs they hold. I was provided only with the text of the brochure and their database of img. The design of the brochure ended up influencing all the other materials I would design for them to give everything at the agency a cohesive look.">
+							<img src="img/rysa_brochure.png" height="250px" />
+						</a>

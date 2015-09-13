@@ -1,0 +1,285 @@
+/* For mobile devices */
+html {
+    -webkit-text-size-adjust: none;
+ }
+
+.clearfix:after {
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+body {
+	font-family: 'Raleway', Helvetica, Arial, Serif; /* Font Weight = light: 300, medium: 500, semi-bold: 600 */
+	font-size: 105%;
+	color: #4e4e4e;
+	font-weight: 300;
+	
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	min-width: 1020px; /* Extra 95px for Android devices */
+	
+	background-color: #4e4e4e;
+}
+
+/* For old versions of Firefox */
+img {
+	border: none;
+	outline: none;
+}
+
+a:link, a:visited, a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.wrapper {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+	
+/* Navigation Bar */
+	#navigation {
+		background-color: #4e4e4e;
+		padding-top: 30px;
+		padding-bottom: 30px;	
+		padding-left: 15px;
+		padding-right: 10px;
+		
+		font-size: 100%;
+		font-weight: 300;
+		color: #a0a0a0;
+		
+		max-height: 1000000px; /* So Chrome on Android doesn't resize text */
+	}
+	
+	#navigation a:link, #navigation a:visited {
+		color: #ffffff;
+		text-decoration: none;
+		font-weight: 500;
+		margin: 0px 12px;
+		
+		transition: color .5s ease-out;
+		-moz-transition: color .5s ease-out;
+		-webkit-transition: color .5s ease-out;
+		-o-transition: color .5s ease-out;
+	}
+	
+	#navigation a:hover {
+		text-decoration: none;
+		color: #a0a0a0;
+	}
+	
+	#navigation img {
+		height: auto;
+		width: auto;
+		
+		position: relative;
+		top: -21px;
+
+		opacity: 1;
+		transition: opacity .5s ease-out;
+		-moz-transition: opacity .5s ease-out;
+		-webkit-transition: opacity .5s ease-out;
+		-o-transition: opacity .5s ease-out;
+	}
+	
+	#navigation img:hover {
+		opacity: .46;
+	}
+	
+	#navigation .wrapper {
+		max-width:1370px; 
+		min-width:1000px; 
+		width:100%;
+	}
+	
+/* Header */
+	#header {
+		background-color: #24e0a0;
+		background-image: url('../img/stripe.png');
+		
+		padding-top: 40px;
+		padding-bottom: 40px;
+		
+		width: 100%;
+		color: #ffffff;
+		
+		max-height: 1000000px; /* So Chrome on Android doesn't resize text */
+	}
+	
+	#header h1 {
+		font-weight: 600;
+		font-size: 230%;
+		text-align: center;
+	}
+	
+	#header h2 {
+		font-weight: 500;
+		font-size: 156%;
+		text-align: center;
+		
+		width: 710px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#header h3 {
+		font-weight: 500;
+		color: #4e4e4e;
+		
+		float: left;
+		position: relative;
+		margin: 0px;
+	}
+	
+	#header p {
+		width: 72%;
+		float: right;
+		
+		font-size: 120%;
+		font-weight: 400;
+		text-align: right;
+	}
+		
+	#map-canvas {
+		width:100%; 
+		height:176px;
+		margin: 0;
+		padding: 0;
+	}
+	
+	#down {
+		text-align: center;
+		vertical-align: middle;
+		
+		position: relative;
+		bottom: 90px;
+		
+		border: none;
+		outline: none;
+		
+		opacity: .55;
+		transition: opacity .35s ease-out;
+		-moz-transition: opacity .35s ease-out;
+		-webkit-transition: opacity .35s ease-out;
+		-o-transition: opacity .35s ease-out;
+	}
+	
+	#down:hover {
+		opacity: .85;    
+	}
+	
+/* Content */
+	#content {
+		background-color: #ffffff;
+		padding: 20px 0; /* absence of this padding creates grey margin between Header and Content */
+		color: #4e4e4e;
+		font-weight: 400;
+		
+		max-height: 1000000px; /* So Chrome on Android doesn't resize text */
+	}
+	
+	#content h2 {
+		text-align: center;
+		color: #b9b9b9;
+		font-weight: 200;
+		font-size: 175%;
+		
+		padding-top: 30px;
+	}
+	
+	/* Table styles for home page */
+		#content table {
+			color: #8a8a8a;
+			padding: 40px 0;
+		}
+		
+		#content td {
+			text-align: center;
+			
+			width: 33%;
+			padding-left: 35px;
+			padding-right: 35px;
+		}
+		
+		#content table h1 {
+			margin: 0px;
+			padding: 0px;
+		
+			text-align: center;
+			border-top: solid 1px;
+			border-bottom: solid 1px;
+			font-weight: 600;
+			font-size: 250%;
+			letter-spacing: 8px;
+		}
+		
+		#content td p {
+			line-height: 175%;
+		}
+		
+	#content p {
+		line-height: 150%;
+	}
+	
+	.me {
+		float: right;
+		clear: right;
+		margin-right: 65px;
+		margin-left: 5px;
+		shape-outside: url(/img/johnwiebe.png);
+		shape-image-threshold: 0.5;
+	}
+	
+	#content a:link, #content a:visited, #content a:hover {
+		color: #4e4e4e;
+	}
+	
+	/* Contact form styles */
+		#content form {
+			padding-left: 5px;
+		}
+		
+		input, textarea {
+			margin-bottom: 8px;
+		}
+		
+		.error, .success {
+			font-size: 100%;
+			border: 1px solid;
+		}
+		
+		.error {
+			background: #ffc0c0;
+			color: #900;
+		}
+		
+		.success {
+			background: #b3ff69;
+			color: #4fa000;
+		}
+	
+/* Footer */
+	#footer {
+		background-color: #4e4e4e;
+		padding: 30px 0;
+		
+		text-align: center;
+		color: #ffffff;
+		font-weight: 300;
+		font-size: 70%;
+		
+		max-height: 1000000px; /* So Chrome on Android doesn't resize text */
+	}
+	
+	#footer a:link, #footer a:visited, #footer a:hover {
+		color: #ffffff;
+		text-decoration: underline;
+		line-height: 175%;
+	}
+                            

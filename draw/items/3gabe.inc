@@ -1,0 +1,3 @@
+<a href="" data-largesrc="img/gabe.png" data-title="John Gabriel" data-description="I love <a href='http://www.penny-arcade.com' target='_blank'>Penny Arcade</a>. I'm an avid gamer and have been reading the web comic since 2007. The art and people that make Penny Arcade have been a huge influence to my own art style, especially in the past few years. This was a drawing I did of one the main characters, John Gaberiel, in 2014. It's based on <a href='http://penny-arcade.com/comic/2014/05/28/harvest' target='_blank'>this</a> Penny Arcade strip.">
+							<img src="img/gabe.png" height="250px" />
+						</a>

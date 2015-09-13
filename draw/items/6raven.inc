@@ -1,0 +1,3 @@
+<a href="" data-largesrc="img/raven.png" data-title="Raven" data-description="In the summer of 2013, during my time at the <a href='http://www.rysa.bc.ca' target='_blank'>Richmond Service Agency</a>, I really got to develop my skills in Adobe Illustrator. While I had certainly used the program before, I wasn't as comfortable in it as I was in say Photoshop. One of things I had always wanted to do was to create an entire vector based drawing in Illustrator. This raven was me fulfilling that wish. I used a picture of a raven carving from YVR Airport here in Vancouver as my guide and drew this as the background for a flyer for an Aboriginal Youth program the agency was running.">
+							<img src="img/raven.png" height="250px" />
+						</a>

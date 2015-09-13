@@ -1,0 +1,76 @@
+/* ABOUT HERO */
+#about-hero {
+  background: url("/img/about-hero.jpg") no-repeat top center;
+  height: 370px;
+}
+  #about-hero h3 {
+    font-size: 400%;
+    color: #fff;
+
+    margin: 0;
+    margin-left: 10%;
+    padding-top: 140px;
+  }
+
+/* HEADER */
+#header {
+  padding: 25px 0;
+}
+  #header p {
+    width: 100%;
+    float: none;
+    
+    font-size: 105%;
+    font-weight: inherit;
+    text-align: left;
+  }
+
+/* CONTENT */
+#content h1 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+
+  margin: 20px 0;
+  clear:both;
+}
+
+/* SKILLS */
+#content #skills {
+  margin-bottom: 50px;
+}
+
+  #content #skills .skillbar {
+    width: 48%;
+    float: left;
+  }
+    #content #skills .skillbar:nth-child(odd) {
+      margin-right: 2%;
+    }
+
+/* EXPERIENCES */
+#content #experiences .experience:nth-child(even) img {
+  float: right;
+}
+#content #experiences .experience:nth-child(even) .description {
+  float:left;
+}
+#content #experiences .experience:nth-child(odd) img {
+  float: left;
+}
+#content #experiences .experience:nth-child(odd) .description {
+  float: right;
+}
+
+/* ABOUT SUMMARY */
+#content #about-summary {
+  background-color: #a0a0a0;
+  margin-bottom: -20px;
+  padding: 20px 0;
+
+  color: #fff;
+  font-weight: 300;
+}
+  #content #about-summary a {
+    color: #fff;
+  }

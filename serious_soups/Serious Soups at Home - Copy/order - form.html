@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" 
+    xml:lang="en">
+	<head>
+		<title>Order | Serious Soups at Home</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="description" content="Healthy, flavourful soup direct to your home; quality that gets your family raving. We deliver gourmet soup to the Vancouver area. Soups are made from fresh, natural ingredients (low in sodium, no MSG, artificial preservatives)." />
+		<meta name="keywords" content="serious soups home soup serioussoupsathome seriousoupsathome delivery deliver local Vancouver gourmet fresh natural healthy health convenient chili vegetarian meat seafood dairy non-dairy" />
+		<link rel="stylesheet" href="styles/style2col.css" type="text/css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<script type="text/javascript" src="styles/random_image.js"></script><!--javascript inserts random images from three different groups-->
+		<script language="javascript">
+			fields = 1;
+			function addInput() {
+				document.getElementById('soups').innerHTML += '<select size="1" name="soup[]" rows="52"><option selected="selected"> Choose a Soup </option><option value="Butter Chicken"> Butter Chicken</option><option value="Mexican Chicken"> Mexican Chicken</option><option value="Thai Curried Chicken with Coconut, Lime and Cilantro"> Thai Curried Chicken with Coconut, Lime &amp Cilantro</option><option value="Greek Lamb and Spinach"> Greek Lamb &amp Spinach</option><option value="Classic Chicken Noodle"> Classic Chicken Noodle</option><option value="Chicken with Wild Rice" > Chicken with Wild Rice</option><option value="Smoked Chicken and Sundried Tomato"> Smoked Chicken &amp Sundried Tomato</option><option value="Split Pea with Black Forest Ham"> Split Pea with Black Forest Ham</option><option value="Hearty Beef and Barley"> Hearty Beef &amp Barley</option><option value="Ultimate Creamy Clam Chowder"> Ultimate Creamy Clam Chowder</option><option value="Coconut Curry Vegetable"> Coconut Curry Vegetable</option><option value="Indonesian Lentil and Pumpkin"> Indonesian Lentil &amp Pumpkin</option><option value="Tuscan White Bean with Spinach and Sundried Tomatoes"> Tuscan White Bean with Spinach &amp Sundried Tomatoes</option><option value="Fire Roasted Corn, Sweet Red Pepper and Black Bean"> Fire Roasted Corn, Sweet Red Pepper &amp Black Bean</option><option value="Minestrone with Fresh Basil"> Minestrone with Fresh Basil</option><option value="Moroccan Yam"> Moroccan Yam</option><option value="Butternut Squash, Carrot and Ginger"> Butternut Squash, Carrot &amp Ginger</option><option value="Serious Mushroom"> Serious Mushroom</option><option value="Fresh Tomato and Fresh Basil Bisque"> Fresh Tomato &amp Fresh Basil Bisque</option><option value="Leek and Potato"> Leek &amp Potato</option><option value="Broccoli and Cheddar"> Broccoli &amp Cheddar</option><option value="South Western Corn Chowder"> South Western Corn Chowder</option><option value="Cauliflower with Dijon and Chives"> Cauliflower with Dijon &amp Chives</option><option value="Vegetarian Chili"> Vegetarian Chili</option><option value="Wild Turkey Chili"> Wild Turkey Chili</option><option value="Texas Beef Chili"> Texas Beef Chili</option></select> Amount: <input type="numeric" name="quantity[]" size="1" value="1" /><br />';
+				fields += 1;
+			}
+		</script>
+		
+		<script language="text/javascript" src="scripts/usableforms.js"></script>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<div id="logo">
+				SERIOUS SOUPS<br />
+				AT HOME
+			</div><!--end of logo-->
+			
+			<div id="images">
+				<!--<script type="text/javascript" language="JavaScript">
+					pickImageFrom(0);
+				</script>
+				<script type="text/javascript" language="JavaScript">
+					pickImageFrom(1);
+				</script>
+				<script type="text/javascript" language="JavaScript">
+					pickImageFrom(2);
+				</script>
+				<noscript>
+					<img src="images/temp2.png" />
+					<img src="images/temp8.png" />
+					<img src="images/temp3.png" />
+				</noscript>-->
+				<img src="images/lamb_spinach.png">
+				<img src="images/tomato_basil.png">
+				<img src="images/smoked_chicken.png">
+			</div><!--end of images-->
+			
+			<div id="navigation">
+				<a href="index.html">Home</a>|<a href="soups.html">Soups</a>|Order|<a href="about.html">About</a>|<a href="contact.html">Contact</a>
+			</div><!--end of navigation-->
+			
+			<div id="content">
+					<h3>Price: $8 per 800ml, or $35 for 5 soups</h3>
+					<p>
+						<strong>Order by Sunday for delivery Thursday/Friday</strong>. $30 order minimum for delivery within 5km. $45 order minimum for delivery outside of 5km, within Vancouver City. Pick-up can be arranged near Main and King Edward location.
+					</p>	
+                <form name="order" method="post">
+					<table id="formtable" cellspacing="10px">
+						<tr>
+							<th>First Name:</th>
+							<td><input type="text" size="20" name="firstname" /></td>
+							<th>Last Name:</th>
+							<td><input type="text" name="lastname" /></td>
+						</tr>
+						<tr>
+							<th>Phone Number:</th>
+							<td><input type="numeric" name="areacode" size="3" maxlength="3" />-<input type="numeric" name="prefix" size="3" maxlength="3" />-<input type="numeric" name="number" size="4" maxlength="4" /></td>
+							<th>Email:</th>
+							<td><input type="text" name="email" /></td>
+						</tr>
+						<tr>
+							<th>Delivery Method:</th>
+							<td>
+								<input type="radio" name="method" value="pickup" checked="checked" rel="none" /> Pickup <br />
+								<input type="radio" name="method" value="delivery" rel="address" /> Delivery <br />
+							</td>
+						</tr>
+						<div rel="address">
+							<tr rel="address">
+								<th>Address Line 1:</th>
+								<td colspan="3"><input type="text" size="71" name="address1" /></td>
+							</tr>
+							<tr>
+								<th>Address Line 2:</th>
+								<td colspan="3"><input type="text" size="71" name="address2" /></td>
+							</tr>
+						</div>
+
+						<tr></tr><!--spacing-->
+						<tr></tr><!--spacing-->
+						
+						<tr>
+							<th>Soup(s):</th>
+							<td colspan="3" id="soups">
+								<select size="1" name="soup[]">
+									<option selected="selected"> Choose a Soup </option>
+									<option value="Butter Chicken"> Butter Chicken</option>
+									<option value="Mexican Chicken"> Mexican Chicken</option>
+									<option value="Thai Curried Chicken with Coconut, Lime and Cilantro"> Thai Curried Chicken with Coconut, Lime &amp Cilantro</option>
+									<option value="Greek Lamb and Spinach"> Greek Lamb &amp Spinach</option>
+									<option value="Classic Chicken Noodle"> Classic Chicken Noodle</option>
+									<option value="Chicken with Wild Rice" > Chicken with Wild Rice</option>
+									<option value="Smoked Chicken and Sundried Tomato"> Smoked Chicken &amp Sundried Tomato</option>
+									<option value="Split Pea with Black Forest Ham"> Split Pea with Black Forest Ham</option>
+									<option value="Hearty Beef and Barley"> Hearty Beef &amp Barley</option>
+									<option value="Ultimate Creamy Clam Chowder"> Ultimate Creamy Clam Chowder</option>
+									<option value="Coconut Curry Vegetable"> Coconut Curry Vegetable</option>
+									<option value="Indonesian Lentil and Pumpkin"> Indonesian Lentil &amp Pumpkin</option>
+									<option value="Tuscan White Bean with Spinach and Sundried Tomatoes"> Tuscan White Bean with Spinach &amp Sundried Tomatoes</option>
+									<option value="Fire Roasted Corn, Sweet Red Pepper and Black Bean"> Fire Roasted Corn, Sweet Red Pepper &amp Black Bean</option>
+									<option value="Minestrone with Fresh Basil"> Minestrone with Fresh Basil</option>
+									<option value="Moroccan Yam"> Moroccan Yam</option>
+									<option value="Butternut Squash, Carrot and Ginger"> Butternut Squash, Carrot &amp Ginger</option>
+									<option value="Serious Mushroom"> Serious Mushroom</option>
+									<option value="Fresh Tomato and Fresh Basil Bisque"> Fresh Tomato &amp Fresh Basil Bisque</option>
+									<option value="Leek and Potato"> Leek &amp Potato</option>
+									<option value="Broccoli and Cheddar"> Broccoli &amp Cheddar</option>
+									<option value="South Western Corn Chowder"> South Western Corn Chowder</option>
+									<option value="Cauliflower with Dijon and Chives"> Cauliflower with Dijon &amp Chives</option>
+									<option value="Vegetarian Chili"> Vegetarian Chili</option>
+									<option value="Wild Turkey Chili"> Wild Turkey Chili</option>
+									<option value="Texas Beef Chili"> Texas Beef Chili</option>
+								</select>
+								Amount: <input type="numeric" name="quantity[]" size="1" value="1" />
+								<br />
+							</td>
+						</tr>
+						
+						<tr>
+							<td></td>
+							<td><input type="button" onclick="addInput()" name="add" value="Add Another Soup" /></td>
+						</tr>
+						<tr></tr><!--spacing-->
+						<tr></tr><!--spacing-->
+						<tr>
+							<th>Comments:</th>
+							<td colspan="3"><textarea name:"comments" cols="50" rows="3"></textarea></td>
+						</tr>
+					</table>
+					<input type="submit" name="Submit Order" id="submit" value="Submit Order" />
+                </form>
+			</div><!--end of content-->
+			
+			<div id="footer">
+				Copyright &copy; Serious Soups at Home | 2012
+			</div><!--end of footer-->
+		</div><!--end of wrapper-->
+	</body>
+</html>

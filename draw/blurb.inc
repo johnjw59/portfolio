@@ -1,0 +1,1 @@
+For as long as I can remember, I've been drawing. My notes from school have always been covered in scribbles and doodles. I find it's a great way to relax and I love the joy I can bring others by drawing something funny. Here you will find a small collection of some of my favourites.

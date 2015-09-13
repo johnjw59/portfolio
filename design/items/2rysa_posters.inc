@@ -1,0 +1,3 @@
+<a href="" data-largesrc="img/rysa_posters.png" data-title="RYSA Program Posters" data-description="While I was working at the <a href='http://www.rysa.bc.ca' target='_blank'>Richmond Youth Service Agency</a> during the summer of 2013, I was asked to create/refresh the posters and pamphlets for all of their major programs. Using the design of the brochure I had already created as inspiration for myself, I created these posters (pamphlets not pictured). You can really see the new design theme I created for them and how I was able to carry it across all of their marketing materials, giving everything a common element and tying all their varied programs together.">
+							<img src="img/rysa_posters.png" height="250px" />
+						</a>

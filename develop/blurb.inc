@@ -1,0 +1,1 @@
+Ever since my family's old Windows '95 computer I've known that working with computers was where I wanted to be. In my post-secondary education, Computer Science quickly dominated my interests. Gathered here are some of the things I've built as I've learned more and more.

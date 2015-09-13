@@ -1,0 +1,3 @@
+<a href="" data-largesrc="img/arrowsmith_xmas_ticket.png" data-title="Arrowsmith Baptist Church Christmas Ticket" data-description="My church in Port Alberni hosts a Christmas Banquet every year. For the past few years they have asked me to design the tickets and posters to advertise the annual event. All I am ever given is the text that the ticket/poster should contain and the &quot;theme verse&quot;, I then have to design something. This is often quite challenging but it's a very good design exercise and I always enjoy doing it.">
+							<img src="img/arrowsmith_xmas_ticket.png" height="250px" />
+						</a>

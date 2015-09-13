@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" 
+    xml:lang="en">
+	<head>
+		<title>Skytrain Ticket Kiosk - Leaflitter Crab</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+		// In the following example, markers appear when the user clicks on the map.
+		// The markers are stored in an array.
+		// The user can then click an option to hide, show or delete the markers.
+		var map;
+		
+		function initialize() {
+			var newark = new google.maps.LatLng(27.030, -89.684);
+			
+		
+			var imageBounds = new google.maps.LatLngBounds(
+				new google.maps.LatLng(27.002216, -89.804),
+				new google.maps.LatLng(27.063941, -89.62944));
+		
+			var mapOptions = {
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				zoom: 13,
+				maxZoom: 14,
+				minZoom: 13,
+				disableDefaultUI: true,
+				panControl: true,
+				zoomControl: true,
+				center: new google.maps.LatLng(27.030, -89.73)
+			};
+		
+			map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			
+			historicalOverlay = new google.maps.GroundOverlay('../img/transit_map.jpg', imageBounds);
+			historicalOverlay.setMap(map);
+			
+			// bounds of the desired area
+			var allowedBounds = new google.maps.LatLngBounds(
+				new google.maps.LatLng(27.002216, -89.804), 
+				new google.maps.LatLng(27.063941, -89.62944)
+			);
+			var lastValidCenter = map.getCenter();
+
+			google.maps.event.addListener(map, 'center_changed', function() {
+				if (allowedBounds.contains(map.getCenter())) {
+					// still within valid bounds, so save the last valid position
+					lastValidCenter = map.getCenter();
+					return; 
+				}
+				// not valid anymore => return to last valid position
+				map.panTo(lastValidCenter);
+			});
+			
+			//ALL THE SKYTRAIN STATIONS
+			var yvr = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0140, -89.8028),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(yvr, 'click', function() {
+				window.location.href = "4-tickettype_yvrairport.html";
+			});
+			
+			var sea_island = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0140, -89.795),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(sea_island, 'click', function() {
+				window.location.href = "4-tickettype_seaislandcentre.html";
+			});
+			
+			var templeton = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0140, -89.7871),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(templeton, 'click', function() {
+				window.location.href = "4-tickettype_templeton.html";
+			});
+			
+			var brighouse = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0024, -89.77788),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(brighouse, 'click', function() {
+				window.location.href = "4-tickettype_richmondbrighouse.html";
+			});
+			
+			var lansdowne = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0074, -89.77788),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(lansdowne, 'click', function() {
+				window.location.href = "4-tickettype_lansdowne.html";
+			});
+			
+			var aberdeen = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0135, -89.77788),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(aberdeen, 'click', function() {
+				window.location.href = "4-tickettype_aberdeen.html";
+			});
+			
+			var bridgeport = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0181, -89.7777),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(bridgeport, 'click', function() {
+				window.location.href = "4-tickettype_bridgeport.html";
+			});
+			
+			var marine = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0233, -89.7753),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(marine, 'click', function() {
+				window.location.href = "4-tickettype_marinedrive.html";
+			});
+			
+			var langara = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0289, -89.7753),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(langara, 'click', function() {
+				window.location.href = "4-tickettype_langara49thavenue.html";
+			});
+			
+			var oakridge = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0326, -89.7753),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(oakridge, 'click', function() {
+				window.location.href = "4-tickettype_oakridge41stavenue.html";
+			});
+			
+			var king_ed = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0379, -89.7753),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(king_ed, 'click', function() {
+				window.location.href = "4-tickettype_kingedward.html";
+			});
+			
+			var broadway = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0418, -89.7753),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(broadway, 'click', function() {
+				window.location.href = "4-tickettype_broadwaycityhall.html";
+			});
+			
+			var olympic = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0461, -89.7753),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(olympic, 'click', function() {
+				window.location.href = "4-tickettype_olympicvillage.html";
+			});
+			
+			var yaletown = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0515, -89.7765),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(yaletown, 'click', function() {
+				window.location.href = "4-tickettype_yaletownroundhouse.html";
+			});
+			
+			var city_centre = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0559, -89.7775),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(city_centre, 'click', function() {
+				window.location.href = "4-tickettype_vancouvercitycentre.html";
+			});
+			
+			var burrard = new google.maps.Marker({
+				position: new google.maps.LatLng(27.06, -89.7778),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(burrard, 'click', function() {
+				window.location.href = "4-tickettype_burrard.html";
+			});
+			
+			var waterfront = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0616, -89.7715),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(waterfront, 'click', function() {
+				window.location.href = "4-tickettype_waterfront.html";
+			});
+			
+			var granville = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0568, -89.7738),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(granville, 'click', function() {
+				window.location.href = "4-tickettype_granville.html";
+			});
+			
+			var chinatown = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0521, -89.7718),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(chinatown, 'click', function() {
+				window.location.href = "4-tickettype_stadiumchinatown.html";
+			});
+			
+			var main = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0486, -89.76657),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(main, 'click', function() {
+				window.location.href = "4-tickettype_mainstreetscienceworld.html";
+			});
+			
+			var vcc_clark = new google.maps.Marker({
+				position: new google.maps.LatLng(27.044, -89.764),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(vcc_clark, 'click', function() {
+				window.location.href = "4-tickettype_vccclark.html";
+			});
+			
+			var commercial = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0425, -89.756),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(commercial, 'click', function() {
+				window.location.href = "4-tickettype_commercialbroadway.html";
+			});
+			
+			var nanaimo = new google.maps.Marker({
+				position: new google.maps.LatLng(27.039, -89.750),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(nanaimo, 'click', function() {
+				window.location.href = "4-tickettype_nanaimo.html";
+			});
+			
+			var twentyninth = new google.maps.Marker({
+				position: new google.maps.LatLng(27.037, -89.7426),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(twentyninth, 'click', function() {
+				window.location.href = "4-tickettype_29thavenue.html";
+			});
+			
+			var renfrew = new google.maps.Marker({
+				position: new google.maps.LatLng(27.043, -89.7426),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(renfrew, 'click', function() {
+				window.location.href = "4-tickettype_renfrew.html";
+			});
+			
+			var joyce = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0353, -89.7337),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(joyce, 'click', function() {
+				window.location.href = "4-tickettype_joycecollingwood.html";
+			});
+			
+			var rupert = new google.maps.Marker({
+				position: new google.maps.LatLng(27.043, -89.7342),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(rupert, 'click', function() {
+				window.location.href = "4-tickettype_rupert.html";
+			});
+			
+			var patterson = new google.maps.Marker({
+				position: new google.maps.LatLng(27.033, -89.725),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(patterson, 'click', function() {
+				window.location.href = "4-tickettype_patterson.html";
+			});
+			
+			var metrotown = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0309, -89.7158),
+				map:map,
+				icon: '../img/person.png'
+			});
+			/*google.maps.event.addListener(metrotown, 'click', function() {
+				window.location.href = "4-tickettype_metrotown.html";
+			});*/
+			
+			var royal_oak = new google.maps.Marker({
+				position: new google.maps.LatLng(27.029, -89.7084),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(royal_oak, 'click', function() {
+				window.location.href = "4-tickettype_royaloak.html";
+			});
+			
+			var edmonds = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0276, -89.6972),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(edmonds, 'click', function() {
+				window.location.href = "4-tickettype_edmonds.html";
+			});
+			
+			var twentysecond = new google.maps.Marker({
+				position: new google.maps.LatLng(27.024, -89.6893),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(twentysecond, 'click', function() {
+				window.location.href = "4-tickettype_22ndstreet.html";
+			});
+			
+			var new_westminster = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0268, -89.68),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(new_westminster, 'click', function() {
+				window.location.href = "4-tickettype_newwestminster.html";
+			});
+			
+			var columbia = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0293, -89.67435),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(columbia, 'click', function() {
+				window.location.href = "4-tickettype_columbia.html";
+			});
+			
+			var scott_road = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0275, -89.6663),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(scott_road, 'click', function() {
+				window.location.href = "4-tickettype_scottroad.html";
+			});
+			
+			var gateway = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0229, -89.6615),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(gateway, 'click', function() {
+				window.location.href = "4-tickettype_gateway.html";
+			});
+			
+			var surrey = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0175, -89.6615),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(surrey, 'click', function() {
+				window.location.href = "4-tickettype_surreycentral.html";
+			});
+			
+			var king_george = new google.maps.Marker({
+				position: new google.maps.LatLng(27.013, -89.6541),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(king_george, 'click', function() {
+				window.location.href = "4-tickettype_kinggeorge.html";
+			});
+			
+			var gilmore = new google.maps.Marker({
+				position: new google.maps.LatLng(27.043, -89.7233),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(gilmore, 'click', function() {
+				window.location.href = "4-tickettype_gilmore.html";
+			});
+			
+			var brentwood = new google.maps.Marker({
+				position: new google.maps.LatLng(27.043, -89.7147),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(brentwood, 'click', function() {
+				window.location.href = "4-tickettype_brentwoodtowncentre.html";
+			});
+			
+			var holdom = new google.maps.Marker({
+				position: new google.maps.LatLng(27.043, -89.7062),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(holdom, 'click', function() {
+				window.location.href = "4-tickettype_holdom.html";
+			});
+			
+			var sperling = new google.maps.Marker({
+				position: new google.maps.LatLng(27.043, -89.697),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(sperling, 'click', function() {
+				window.location.href = "4-tickettype_sperlingburnabylake.html";
+			});
+			
+			var lake_city = new google.maps.Marker({
+				position: new google.maps.LatLng(27.043, -89.6878),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(lake_city, 'click', function() {
+				window.location.href = "4-tickettype_lakecityway.html";
+			});
+			
+			var production_way = new google.maps.Marker({
+				position: new google.maps.LatLng(27.043, -89.68),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(production_way, 'click', function() {
+				window.location.href = "4-tickettype_productionwayuniversity.html";
+			});
+			
+			var lougheed = new google.maps.Marker({
+				position: new google.maps.LatLng(27.043, -89.6709),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(lougheed, 'click', function() {
+				window.location.href = "4-tickettype_lougheedtowncentre.html";
+			});
+			
+			var braid = new google.maps.Marker({
+				position: new google.maps.LatLng(27.0393, -89.6667),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(braid, 'click', function() {
+				window.location.href = "4-tickettype_braid.html";
+			});
+			
+			var sapperton = new google.maps.Marker({
+				position: new google.maps.LatLng(27.034, -89.6668),
+				map:map,
+				icon: '../img/marker.png'
+			});
+			google.maps.event.addListener(sapperton, 'click', function() {
+				window.location.href = "4-tickettype_sapperton.html";
+			});
+		}
+		
+		google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	
+	<body>
+		<div style="text-align:center; width:1000px; margin-left:auto; margin-right:auto;">
+			<img id="Image-Maps_3201311061453355" src="2-map.jpg" usemap="#Image-Maps_3201311061453355" border="0" width="1000" height="800" alt="" />
+			<map id="_Image-Maps_3201311061453355" name="Image-Maps_3201311061453355">
+			<area shape="rect" coords="421,40,621,87" href="2-zones.html" alt="" title=""    />
+			<area shape="rect" coords="634,40,828,87" href="2-address.html" alt="" title=""    />
+
+			<area shape="poly" coords="877,0,997,120,997,0," href="2-map_help.html" alt="" title=""   />
+			<area shape="rect" coords="0,743,92,795" href="../1-home.html" alt="" title=""    />
+			<area shape="rect" coords="998,798,1000,800" href="http://www.image-maps.com/index.php?aff=mapped_users_3201311061453355" alt="Image Map" title="Image Map" />
+			</map>
+			
+			<div id="map-canvas" align="center" style="height:493px; max-width:1000px;position:relative;top:-610px;z-index:100;"></div>
+		</div>
+	</body>
+</html>

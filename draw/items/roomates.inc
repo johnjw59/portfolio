@@ -1,0 +1,3 @@
+<a href="" data-largesrc="img/roomates.png" data-title="Roomates" data-description="Roomates is a bit of a lie; we shared a whole house, not a room. One of them told me draw everyone in the house and then we were going to paint the drawings on a wall. Like most of our late-night ideas, that never ended up happening but I did draw each of them and if you knew them you would know how much I was able to capture their looks! Only one them is still living in the house now and there is a new set of &quotroomates&quot. Maybe I should draw them...">
+							<img src="img/roomates.png" height="250px" />
+						</a>
