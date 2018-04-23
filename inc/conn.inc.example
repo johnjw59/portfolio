@@ -1,0 +1,10 @@
+<?php
+
+  // Example conn.inc file.
+
+  $contact_email = '';
+
+  $recaptcha_key = '';
+  $recaptcha_secret = '';
+
+  $mailgun_key = '';
