@@ -1,5 +1,8 @@
 <?php
 
+require '../vendor/autoload.php';
+use Mailgun\Mailgun;
+
 // Send an email with the contents of the contact form.
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$required_fields = array(
@@ -33,19 +36,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$result = json_decode($response);
 
 		if ($result->success) {
-			$headers = 'Reply-To: ' . $_POST['email'];
+			$mailgun = Mailgun::create($mailgun_key);
 
-			$message = 'Name: ' . $_POST['name'] . "\r\n";
-			$message .= 'Email: ' . $_POST['email'] . "\r\n";
-			$message .= 'IP: ' . $_SERVER['REMOTE_ADDR'] . "\r\n";
-			$message .= "\r\n" . $_POST['comments'];
+      $message = 'Name: ' . $_POST['name'] . "\r\n";
+      $message .= 'Email: ' . $_POST['email'] . "\r\n";
+      $message .= 'IP: ' . $_SERVER['REMOTE_ADDR'] . "\r\n";
+      $message .= "\r\n" . $_POST['comments'];
 
-			if (mail($contact_email, 'Portfolio Email', $message, $headers)) {
-				$success = TRUE;
-			}
-			else {
-				$error = 'Your mail could not be sent this time. Please try again later.';
-			}
+      $mailgun->messages()->send('jwiebe.ca', array(
+        'from' => $_POST['email'],
+        'to' => $contact_email,
+        'subject' => 'Portfolio Contact Form Submission',
+        'text' => $message,
+      ));
+
+      $success = TRUE;
 		}
 		else {
 			$error = 'Looks like Google thinks you\'re a robot! Feel to try again.';
