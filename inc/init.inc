@@ -1,3 +1,3 @@
 <?php
-	$baseURL = "http://".getenv('HTTP_HOST');
+	$baseURL = "https://".getenv('HTTP_HOST');
 ?>

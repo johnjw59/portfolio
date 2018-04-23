@@ -5,7 +5,7 @@
 
 	$header_add = array('<script src="https://www.google.com/recaptcha/api.js"></script>');
 ?>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> <!-- Google Maps -->
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script> <!-- Google Maps -->
 <?php require_once("../inc/head.inc"); ?>
 	<!-- Google Maps Initialize and options -->
 	<script type="text/javascript">
